@@ -23,19 +23,19 @@ project-scraper-viewer/
 └── templates/
   └── index.html # HTML template for displaying project details
 
-Install Dependencies
+# Install Dependencies
 python -m venv venv
 source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 pip install -r requirements.txt
 
 
-Run the Scraper
+# Run the Scraper
 python scrape_projects.py
 
-Run the Flask Application
+# Run the Flask Application
 python app.py
 
 
-images:
+# images:
 ![op1](https://github.com/user-attachments/assets/f7cdee8c-e278-436e-8430-3b236538251f)
 ![op2](https://github.com/user-attachments/assets/cade44bb-35e8-457e-9d32-d57fbe2ef736)
