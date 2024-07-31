@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered Projects</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Registered Projects</h1>
+    </header>
+    <main>
+        {% if projects %}
+            {% for project in projects %}
+                <section>
+                    <h2>{{ project['Name'] }}</h2>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Promoter Type:</td>
+                                <td>{{ project['Promoter Type'] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Non Individual Type:</td>
+                                <td>{{ project.get('Non Individual Type', 'N/A') }}</td>
+                            </tr>
+                            <tr>
+                                <td>Whether Himachali Agriculturist?</td>
+                                <td>{{ project['Whether Himachali Agriculturist?'] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Registration No.</td>
+                                <td>{{ project['Registration No.'] }}</td>
+                            </tr>
+                            <tr>
+                                <td>MoA/AoA</td>
+                                <td>{{ project.get('MoA/AoA', 'N/A') }}</td>
+                            </tr>
+                            <tr>
+                                <td>PAN No.</td>
+                                <td>{{ project['PAN No.'] }}</td>
+                            </tr>
+                            <tr>
+                                <td>GSTIN No.</td>
+                                <td>{{ project['GSTIN No.'] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Mobile No.</td>
+                                <td>{{ project['Mobile No.'] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Alternate Mobile No.</td>
+                                <td>{{ project.get('Alternate Mobile No.', 'N/A') }}</td>
+                            </tr>
+                            <tr>
+                                <td>Email Id</td>
+                                <td>{{ project['Email Id'] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Alternate Email Id</td>
+                                <td>{{ project.get('Alternate Email Id', 'N/A') }}</td>
+                            </tr>
+                            <tr>
+                                <td>Correspondence Address</td>
+                                <td>{{ project['Correspondence Address'] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Permanent Address</td>
+                                <td>{{ project['Permanent Address'] }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <hr>
+            {% endfor %}
+        {% else %}
+            <p>No projects found.</p>
+        {% endif %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Project Scraper</p>
+    </footer>
+</body>
+</html>
