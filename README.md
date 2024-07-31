@@ -9,7 +9,7 @@ This project is a web application for scraping and displaying project details fr
 - Responsive and styled HTML/CSS frontend.
 
 ## File Structure
-``
+```
 project-scraper-viewer/
 │
 ├── app.py # Flask application script
@@ -22,7 +22,7 @@ project-scraper-viewer/
 │
 └── templates/
   └── index.html # HTML template for displaying project details
-``
+```
 ## Install Dependencies
 python -m venv venv
 source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
